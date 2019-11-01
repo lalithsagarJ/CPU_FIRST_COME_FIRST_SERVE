@@ -70,7 +70,7 @@ void display(NODE p,int process){
 		printf("Turn around time: %.2f\n",p->tat);
 		printf("Waiting Time: %.2f\n",p->wt);
 		printf("Relative Delay: %.2f\n",p->rd);
-		printf("\nResponse Time: %.2f\n",p->rt);
+		printf("Response Time: %.2f\n",p->rt);
 		
 		ttat+=p->tat;
 		twt+=p->wt;
