@@ -94,11 +94,6 @@ void copy(){
 		}
 		ptr=ptr->link;
 	}
-	ptr=START;
-	while(ptr!=NULL){
-		printf("%.1f\n",ptr->bt);
-		ptr=ptr->link;
-	}
 }
 
 
@@ -144,13 +139,13 @@ void mergesort(NODE temp){
 	mergesort(b);
 	temp=sortedmerge(a,b);
 }
-void dis(NODE temp){
+void dis(NODE temp){		//TESTING DISPLAY
 	NODE ptr=temp;
 	while(ptr!=NULL){
 		printf("%.1f ",ptr->bt);
-		ptr=ptr->link;
+		ptr=ptr->link;  
 	}
-}
+}       			//TESTING DISPLAY
 
 /* display the processes*/
 		
