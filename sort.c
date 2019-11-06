@@ -133,7 +133,7 @@ void mergesort(NODE temp){
 	mergesort(b);
 	temp=sortedmerge(a,b);
 }
-void dis(){                                     /* ONLY FOR TESTING PURPOSSSE*/
+void dis(){                                     /* ONLY FOR TESTING PURPOSE*/
 	NODE ptr=START;                             
 	while(ptr!=NULL){
 		printf("%.1f ",ptr->bt);
@@ -141,7 +141,7 @@ void dis(){                                     /* ONLY FOR TESTING PURPOSSSE*/
 		ptr=ptr->link;
 		printf("\n");
 	}
-}                                               /* ONLY FOR TESTING PURPOSSSE*/
+}                                               /* ONLY FOR TESTING PURPOSE*/
 
 
 /* display the processes*/					
