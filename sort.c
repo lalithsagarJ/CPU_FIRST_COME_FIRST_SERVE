@@ -133,15 +133,15 @@ void mergesort(NODE temp){
 	mergesort(b);
 	temp=sortedmerge(a,b);
 }
-void dis(){
-	NODE ptr=START;
+void dis(){                                     /* ONLY FOR TESTING PURPOSSSE*/
+	NODE ptr=START;                             
 	while(ptr!=NULL){
 		printf("%.1f ",ptr->bt);
 		printf("%.1f",ptr->at);
 		ptr=ptr->link;
 		printf("\n");
 	}
-} 
+}                                               /* ONLY FOR TESTING PURPOSSSE*/
 
 
 /* display the processes*/					
@@ -208,7 +208,7 @@ int main(){
 			case 3:printf("\nSJF scheduling\n");
 				copy();
 				mergesort(START);
-				dis();
+				dis();   //TESTING
 				break;
 			default:printf("\nEnter the correct choice\n");
 				break;
