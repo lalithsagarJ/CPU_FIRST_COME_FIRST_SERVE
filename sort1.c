@@ -139,7 +139,7 @@ void mergesort(NODE temp){
 	mergesort(b);
 	temp=sortedmerge(a,b);
 }
-void dis(NODE temp){		//TESTING DISPLAY
+void dis(NODE temp){		//TESTING DISPLAY FOR  SORTING
 	NODE ptr=temp;
 	while(ptr!=NULL){
 		printf("%.1f ",ptr->bt);
@@ -148,7 +148,8 @@ void dis(NODE temp){		//TESTING DISPLAY
 }       			//TESTING DISPLAY
 
 /* display the processes*/
-		
+//MAIN DISPLAY
+
 void display(NODE temp,int process,float tbt,float ttat,float twt,float trd,float trt){
 	NODE p=temp;
 	printf("\n\nProcess Details :");
@@ -196,13 +197,13 @@ void sjf(int process,float *fr){
 	mergesort(START);
 	dis(START);
 	NODE p=START;
-	p->wt=0;
+	*fr=*fr+p->at;
 	while(p!=NULL){
 		
 		p->rt=*fr-p->at;
 		p->pc=*fr+p->bt;
-		p->tat=p->pc-p->at;
-		p->wt=p->tat-p->bt;
+		p->wt=p->pc-p->at;
+		p->tat=p->wt-p->bt;
 		p->rd=p->tat/p->bt;
 		*fr=*fr+p->bt;
 
